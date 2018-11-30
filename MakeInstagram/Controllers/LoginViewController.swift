@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseAuth
 import FirebaseUI
+typealias FIRUser = FirebaseAuth.User
 
 class LoginViewController: UIViewController {
   
@@ -33,9 +34,9 @@ class LoginViewController: UIViewController {
 
   @IBAction func loginButtonTapped(_ sender: Any) {
     // 1
-    guard let authUI = FUIAuth.defaultAuthUI()
-      else { return }
-    
+    guard let authUI = FUIAuth.defaultAuthUI() else {
+      return
+    }
     // 2
     authUI.delegate = self
     
@@ -47,6 +48,11 @@ class LoginViewController: UIViewController {
 
 extension LoginViewController: FUIAuthDelegate {
   func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
+    if let error = error {
+      assertionFailure("Error signing in: \(error.localizedDescription)")
+      return
+    }
+    
     print("handle user signup / login")
   }
 }

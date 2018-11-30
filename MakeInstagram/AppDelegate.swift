@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     FirebaseApp.configure()
-     1
+//  1
     let storyboard = UIStoryboard(name: "Login", bundle: .main)
     
     // 2
