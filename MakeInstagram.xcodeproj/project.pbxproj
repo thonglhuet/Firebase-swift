@@ -20,6 +20,7 @@
 		D2BD2A4421B03B6A00D35536 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D2BD2A4121B03B6A00D35536 /* GoogleService-Info.plist */; };
 		D2BD2A4E21B05FB800D35536 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2BD2A4D21B05FB800D35536 /* Login.storyboard */; };
 		D2BD2A5021B0630800D35536 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD2A4F21B0630800D35536 /* LoginViewController.swift */; };
+		D2BD2A5221B195A100D35536 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD2A5121B195A100D35536 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		D2BD2A4121B03B6A00D35536 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D2BD2A4D21B05FB800D35536 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		D2BD2A4F21B0630800D35536 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D2BD2A5121B195A100D35536 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 		D2BD2A4821B0420400D35536 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D2BD2A5121B195A100D35536 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2BD2A5221B195A100D35536 /* User.swift in Sources */,
 				D2BD2A5021B0630800D35536 /* LoginViewController.swift in Sources */,
 				D2BD2A1621B037E800D35536 /* ViewController.swift in Sources */,
 				D2BD2A1421B037E700D35536 /* AppDelegate.swift in Sources */,
