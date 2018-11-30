@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseUI
 
 class LoginViewController: UIViewController {
   
@@ -30,6 +32,21 @@ class LoginViewController: UIViewController {
   // MARK:  - IBActions
 
   @IBAction func loginButtonTapped(_ sender: Any) {
-    print("Login tappted")
+    // 1
+    guard let authUI = FUIAuth.defaultAuthUI()
+      else { return }
+    
+    // 2
+    authUI.delegate = self
+    
+    // 3
+    let authViewController = authUI.authViewController()
+    present(authViewController, animated: true)
+  }
+}
+
+extension LoginViewController: FUIAuthDelegate {
+  func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
+    print("handle user signup / login")
   }
 }
