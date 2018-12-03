@@ -16,33 +16,21 @@ typealias FIRUser = FirebaseAuth.User
 class LoginViewController: UIViewController {
   
   // MARK: Properties
-
   @IBOutlet weak var loginButton: UIButton!
   
   // MARK: VC Lifecycle
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    // Do any additional setup after loading the view.
   }
-  
+
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated
   }
-  
-
   // MARK:  - IBActions
-
   @IBAction func loginButtonTapped(_ sender: Any) {
-    // 1
-    guard let authUI = FUIAuth.defaultAuthUI() else {
-      return
-    }
-    // 2
+    guard let authUI = FUIAuth.defaultAuthUI() else { return }
     authUI.delegate = self
-    
-    // 3
+
     let authViewController = authUI.authViewController()
     present(authViewController, animated: true)
   }
@@ -54,30 +42,16 @@ extension LoginViewController: FUIAuthDelegate {
       assertionFailure("Error signing in: \(error.localizedDescription)")
       return
     }
-    
-    // 1
-    guard let user = authDataResult?.user
-      else { return }
-    
-    // 2
+    guard let user = authDataResult?.user else { return }
     let userRef = Database.database().reference().child("users").child(user.uid)
 
-    // 3
-//    userRef.observeSingleEvent(of: .value, with: { (snapshot) in
-//      // 1
-//      if let userDict = snapshot.value as? [String : Any] {
-//        print("User already exists \(userDict.debugDescription).")
-//      } else {
-//        print("New user!")
-//      }
-//    })
-
-    userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+    userRef.observeSingleEvent(of: .value, with: { [unowned self] (snapshot) in
       if let user = User(snapshot: snapshot) {
         print("Welcome back, \(user.username).")
       } else {
-        print("New user!")
+        self.performSegue(withIdentifier: "toCreateUsername", sender: self)
       }
     })
+    
   }
 }

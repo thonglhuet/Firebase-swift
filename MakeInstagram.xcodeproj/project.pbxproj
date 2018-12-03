@@ -21,6 +21,8 @@
 		D2BD2A4E21B05FB800D35536 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2BD2A4D21B05FB800D35536 /* Login.storyboard */; };
 		D2BD2A5021B0630800D35536 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD2A4F21B0630800D35536 /* LoginViewController.swift */; };
 		D2BD2A5221B195A100D35536 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2BD2A5121B195A100D35536 /* User.swift */; };
+		D2CA2AB521B39909007863F1 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA2AB421B39909007863F1 /* CreateUsernameViewController.swift */; };
+		D2CA2AB721B54267007863F1 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2CA2AB621B54267007863F1 /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		D2BD2A4D21B05FB800D35536 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		D2BD2A4F21B0630800D35536 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D2BD2A5121B195A100D35536 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D2CA2AB421B39909007863F1 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		D2CA2AB621B54267007863F1 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserService.swift; path = MakeInstagram/Controllers/UserService.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,7 @@
 			children = (
 				D2BD2A1521B037E800D35536 /* ViewController.swift */,
 				D2BD2A4F21B0630800D35536 /* LoginViewController.swift */,
+				D2CA2AB421B39909007863F1 /* CreateUsernameViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 		D2BD2A4921B0420A00D35536 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D2CA2AB621B54267007863F1 /* UserService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -430,7 +436,9 @@
 			files = (
 				D2BD2A5221B195A100D35536 /* User.swift in Sources */,
 				D2BD2A5021B0630800D35536 /* LoginViewController.swift in Sources */,
+				D2CA2AB721B54267007863F1 /* UserService.swift in Sources */,
 				D2BD2A1621B037E800D35536 /* ViewController.swift in Sources */,
+				D2CA2AB521B39909007863F1 /* CreateUsernameViewController.swift in Sources */,
 				D2BD2A1421B037E700D35536 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
