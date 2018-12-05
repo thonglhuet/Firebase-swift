@@ -39,5 +39,4 @@ class CreateUsernameViewController: UIViewController {
     }
   }
   @IBOutlet var usernameTextField: UITextField!
-  
 }

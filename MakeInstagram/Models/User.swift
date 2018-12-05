@@ -24,10 +24,14 @@ class User {
   }
   
   init?(snapshot: DataSnapshot) {
-    guard let dict = snapshot.value as? [String : Any],
-      let username = dict["username"] as? String
-      else { return nil }
+//    guard let dict = snapshot.value as? [String : Any],
+//      let username = dict["username"] as? String
+//      else { return nil }
+//
+//    self.uid = snapshot.key
+//    self.username = username
     
+    guard let dict = snapshot.value as? [String: Any], let username = dict["username"] as? String else { return nil }
     self.uid = snapshot.key
     self.username = username
   }
