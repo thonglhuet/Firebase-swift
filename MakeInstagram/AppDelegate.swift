@@ -18,15 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     // Override point for customization after application launch.
     FirebaseApp.configure()
-//  1
-    let storyboard = UIStoryboard(name: "Login", bundle: .main)
-    
-    // 2
-    if let initialViewController = storyboard.instantiateInitialViewController() {
-      // 3
-      window?.rootViewController = initialViewController
-      // 4
-      window?.makeKeyAndVisible()
+
+    let storyboard = UIStoryboard(name: "Login", bundle: .main) // create story board reference
+
+    if let initialViewController = storyboard.instantiateInitialViewController() { // check if storyboard have set initialViewController property
+      window?.rootViewController = initialViewController // If ok -> Set to rootViewcontroller of UIwindow
+      window?.makeKeyAndVisible() // Position the window above any other existing windows
     }
     return true
   }
